@@ -1,0 +1,114 @@
+:root {
+    /* Primary */
+    --Soft_red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    /* Neutral */
+    --Dark_brown: hsl(25, 47%, 15%);
+    --Medium_brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very_pale_orange: hsl(33, 100%, 98%);
+}
+@font-face {
+    font-family: 'DMSans', sans-serif;
+    src: local('DMSans-Regular'), url(../fonts/DMSans-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'DMSans', sans-serif;
+    src: local('DMSans-Regular'), url(../fonts/DMSans-Italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;    
+}
+@font-face {
+    font-family: 'DMSans', sans-serif;
+    src: local('DMSans-Medium'), url(../fonts/DMSans-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'DMSans', sans-serif;
+    src: local('DMSans-Regular'), url(../fonts/DMSans-MediumItalic.ttf) format('truetype');
+    font-weight: 500;
+    font-style: italic;    
+}
+@font-face {
+    font-family: 'DMSans', sans-serif;
+    src: local('DMSans-Regular'), url(../fonts/DMSans-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'DMSans', sans-serif;
+    src: local('DMSans-Regular'), url(../fonts/DMSans-BoldItalic.ttf) format('truetype');
+    font-weight: 700;
+    font-style: italic;    
+}
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+    border: 0;
+}
+body {
+    font-family: 'DMSans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center; align-items: center;
+}
+.main__div {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vw;
+}
+.main__div__div {
+    width: 100%;
+    border-radius: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.2rem;
+}
+.my_balance {
+    background-color: var(--Soft_red);
+    color: var(--Very_pale_orange);
+    display: flex;
+    justify-content: space-between;
+}
+.my_balance>div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vw;
+}
+.my_balance__ctn-h2 {
+    font-size: 0.5rem;
+}
+.my_balance__ctn-h2 h2 {
+    font-weight: 400;
+}
+.my_balance__ctn-span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.my_balance__logo {
+    width: 20%;
+}
+.last-week {
+    background-color: var(--Very_pale_orange);
+    flex-direction: column;
+}
+.last-week h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-self: flex-start
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
