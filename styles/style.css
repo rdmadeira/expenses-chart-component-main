@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 :root {
     /* Primary */
     --Soft_red: hsl(10, 79%, 65%);
@@ -8,50 +9,51 @@
     --Cream: hsl(27, 66%, 92%);
     --Very_pale_orange: hsl(33, 100%, 98%);
 }
-@font-face {
+/* @font-face {
     font-family: 'DMSans', sans-serif;
-    src: local('DMSans-Regular'), url(../fonts/DMSans-Regular.ttf) format('truetype');
+    src: url('../fonts/DMSans-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;    
 }
 @font-face {
     font-family: 'DMSans', sans-serif;
-    src: local('DMSans-Regular'), url(../fonts/DMSans-Italic.ttf) format('truetype');
+    src: url('../fonts/DMSans-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;    
 }
 @font-face {
     font-family: 'DMSans', sans-serif;
-    src: local('DMSans-Medium'), url(../fonts/DMSans-Medium.ttf) format('truetype');
+    src: url('../fonts/DMSans-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;    
 }
 @font-face {
     font-family: 'DMSans', sans-serif;
-    src: local('DMSans-Regular'), url(../fonts/DMSans-MediumItalic.ttf) format('truetype');
+    src: url('../fonts/DMSans-MediumItalic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;    
 }
 @font-face {
     font-family: 'DMSans', sans-serif;
-    src: local('DMSans-Regular'), url(../fonts/DMSans-Bold.ttf) format('truetype');
-    font-weight: 700;
+    src: url('../fonts/DMSans-Bold.woff2') format('woff2');
+    font-weight: bold;
     font-style: normal;    
 }
 @font-face {
     font-family: 'DMSans', sans-serif;
-    src: local('DMSans-Regular'), url(../fonts/DMSans-BoldItalic.ttf) format('truetype');
-    font-weight: 700;
+    src: url('../fonts/DMSans-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
     font-style: italic;    
-}
+} */
 * {
     box-sizing: border-box;
     margin: 0 0;
     border: 0;
 }
 body {
-    font-family: 'DMSans', sans-serif;
-    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 18px;
 }
 main {
@@ -62,7 +64,7 @@ main {
     justify-content: center; align-items: center;
 }
 .main__div {
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     row-gap: 5vw;
@@ -87,14 +89,14 @@ main {
     row-gap: 2vw;
 }
 .my_balance__ctn-h2 {
-    font-size: 0.5rem;
+    font-size: 0.5em;
 }
 .my_balance__ctn-h2 h2 {
-    font-weight: 400;
+    font-weight: lighter;
 }
 .my_balance__ctn-span {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 .my_balance__logo {
     width: 20%;
@@ -102,13 +104,130 @@ main {
 .last-week {
     background-color: var(--Very_pale_orange);
     flex-direction: column;
+    display: flex;
 }
-.last-week h2 {
-    font-size: 1.1rem;
+.last-week_ctn-h2 {
+    align-self: flex-start;
+}
+.last-week_ctn-h2 h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--Dark_brown);
+}
+.last-week_ctn-graph {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    column-gap: 15px;    
+    padding: 10vw 0vw;
+    width: 100%;
+    align-content: flex-end;
+    height: fit-content;
+    border-bottom: solid 1px var(--Cream);
+}
+.day-div {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    justify-content: stretch;
+    align-self: end;
+}
+.barra_vertical {
+    height: 40px;
+    background-color: var(--Soft_red);
+    border-radius: 5px;
+    position: relative;
+}
+.barra_vertical::before {
+    
+    background-color: var(--Dark_brown);
+    color: var(--Very_pale_orange);
+    font-size: 0.5em;
     font-weight: 700;
-    align-self: flex-start
+    position: absolute;
+    top: -30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
 }
-
-
+.barra_vertical:hover {
+    cursor: pointer;
+    background-color: hsla(10.2, 78.8%, 64.9%, 0.57);
+}
+.day {
+    font-size: 0.7rem;
+    justify-self: center;
+    color: var(--Medium_brown);
+}
+.ctn-total_month {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 6vw 0 0;
+}
+.total_month__div {
+    width: 40%;
+}
+.total_month__div h3 {
+    font-size: 0.8rem;
+    color: var(--Medium_brown);
+    font-weight: 400;
+}
+.total_month__div span {
+    font-size: 1.5em;
+    color: var(--Dark_brown);
+    font-weight: 700;
+}
+.compare_lastmonth {
+    text-align: end;
+    align-self: flex-end;
+}
+.compare_lastmonth span{
+    font-size: 1rem;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+.cyan {
+    background-color: var(--Cyan) !important
+}
+
+@media all and (orientation: landscape) {
+    main {
+        height: fit-content;
+        padding: 5vw 4vw;
+    }
+    .main__div {
+        width: 40%;
+        row-gap: 2vw;
+    }
+    .my_balance__logo {
+        width: 15%;
+    }
+    .last-week_ctn-graph {
+        padding: 3vw 0 1vw;
+    }
+    .my_balance > div {
+        row-gap: 0.8vw;
+    }
+    .main__div__div {
+        padding: 1.3em 1.3em;
+    }
+    .ctn-total_month {
+        padding: 3vw 0 0;
+    }
+    .total_month__div h3 {
+        font-size: 0.6em;
+    }
+    .total_month__div span {
+        font-size: 1.7em;
+    }
+    .compare_lastmonth span {
+        font-size: 0.8em;
+    }
+}
+@media all and (min-width: 1440px) {
+    .main__div {
+        width: 32%;
+    }
+}
