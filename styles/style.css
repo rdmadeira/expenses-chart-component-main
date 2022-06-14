@@ -137,18 +137,6 @@ main {
     border-radius: 5px;
     position: relative;
 }
-.barra_vertical::before {
-    
-    background-color: var(--Dark_brown);
-    color: var(--Very_pale_orange);
-    font-size: 0.5em;
-    font-weight: 700;
-    position: absolute;
-    top: -30px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    
-}
 .barra_vertical:hover {
     cursor: pointer;
     background-color: hsla(10.2, 78.8%, 64.9%, 0.57);
@@ -200,6 +188,7 @@ main {
     .main__div {
         width: 40%;
         row-gap: 2vw;
+        min-width: 300px;
     }
     .my_balance__logo {
         width: 15%;
