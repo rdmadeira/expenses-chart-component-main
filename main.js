@@ -30,16 +30,17 @@ function amountAsign(){
         }
     ]
     let fecha = Date.now(); // genera un numero
-    let hoy = new Date(fecha).getDay(); // genera y¿numero de 0 a 6
+    let hoy = new Date(fecha).getDay(); // genera numero de 0 a 6
     hoy == 0 ? hoy = 7 : hoy;
     let style = document.styleSheets.item(0);
     const barrasVerticales = document.getElementsByClassName('barra_vertical');
-    barrasVerticales[hoy - 1].style.backgroundColor = 'var(--Cyan)';
-    barrasVerticales[hoy - 1].addEventListener('mouseover',()=> barrasVerticales[hoy - 1].style.backgroundColor = 'hsla(186, 34%, 60%, 0.59)');
-    barrasVerticales[hoy - 1].addEventListener('mouseout',()=> barrasVerticales[hoy - 1].style.backgroundColor = 'var(--Cyan');
-    for(let i=0; i<barrasVerticales.length; i++) {
+    barrasVerticales[hoy - 1].classList.replace('soft-red', 'cyan');
+    
+    for(let i=0; i<barrasVerticales.length; i++) {    
         barrasVerticales[i].style.height = dataAmount[i].amount * 3 + 'px';
         barrasVerticales[i].setAttribute('id', 'bv' + i);
+
+        // funcionó declarando let al i, para que se mantenga en el scopo de la funcion.
         barrasVerticales[i].addEventListener('mouseover', ()=> appearValue(i));
         barrasVerticales[i].addEventListener('mouseout', disappearValue);
     }

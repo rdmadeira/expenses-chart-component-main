@@ -137,9 +137,19 @@ main {
     border-radius: 5px;
     position: relative;
 }
-.barra_vertical:hover {
+.soft-red {
+    background-color: var(--Soft_red);
+}
+.soft-red:hover {
     cursor: pointer;
     background-color: hsla(10.2, 78.8%, 64.9%, 0.57);
+}
+.cyan {
+    background-color: var(--Cyan);
+}
+.cyan:hover {
+    background-color: hsla(186, 34%, 60%, 0.59);
+    cursor: pointer;
 }
 .day {
     font-size: 0.7rem;
@@ -176,9 +186,6 @@ main {
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-.cyan {
-    background-color: var(--Cyan) !important
-}
 
 @media all and (orientation: landscape) {
     main {
