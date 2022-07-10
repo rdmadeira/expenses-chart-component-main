@@ -1,6 +1,6 @@
 async function amountAsign(){
     let dataAmount = fetch('./data.json');
-    dataAmount.then(res=>{return res.json()})
+    dataAmount.then(res=>{console.log(`Status: ${res.status}, ${res.statusText}`);return res.json()})
               .then(data=> {bucleAsign(data);})
               .catch(err=>console.error(`${err}`));  
     let fecha = Date.now(); // genera un numero
