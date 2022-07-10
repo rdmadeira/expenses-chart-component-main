@@ -1,4 +1,4 @@
-async function amountAsign(){
+function amountAsign(){
     let dataAmount = fetch('./data.json');
     dataAmount.then(res=>{console.log(`Status: ${res.status}, ${res.statusText}`);return res.json()})
               .then(data=> {bucleAsign(data);})
