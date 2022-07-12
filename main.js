@@ -2,8 +2,8 @@ async function getData(){
     const dataFile = await fetch('./data.json');
     try {
         const dataAmount = await dataFile.json();
-        amountAsign(dataAmount);
-        // return dataAmount;
+        // amountAsign(dataAmount);
+        return dataAmount;
     } catch(error) {
         alert(`Whoooops, error: ${error}`);
         console.log(error);
@@ -15,10 +15,11 @@ dataAmount.then(res=>{return res.json()})
               .then(data=> {amountAsign(data);})
               .catch(err=>console.error(`${err}`));  */
 
-async function amountAsign(dataAmount){
+async function amountAsign(){
     const barrasVerticales = document.getElementsByClassName('barra_vertical');
     dateVerify();
     let style = document.styleSheets.item(0);
+    const dataAmount = await getData();
     console.log(dataAmount);
     for(let i=0; i<barrasVerticales.length; i++) {   
         barrasVerticales[i].style.height = 
@@ -44,5 +45,5 @@ async function amountAsign(dataAmount){
     }
     console.log(style);
 }
-getData();
+amountAsign();
 
