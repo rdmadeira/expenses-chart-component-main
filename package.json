@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "moment": "^2.29.4"
+  },
+  "type": "module",
+  "name": "expenses-chart-component-main",
+  "description": "![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdmadeira/expenses-chart-component-main.git"
+  },
+  "keywords": [
+    "challenge",
+    "expenses",
+    "chart",
+    "weekly"
+  ],
+  "author": "Rodrigo Madeira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdmadeira/expenses-chart-component-main/issues"
+  },
+  "homepage": "https://github.com/rdmadeira/expenses-chart-component-main#readme"
+}
