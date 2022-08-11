@@ -1,6 +1,6 @@
-import moment from 'moment';
+//import moment from 'moment';
 //import axios from 'axios';
-console.log(moment().format('YYYY'));
+//console.log(moment().format('YYYY'));
 async function getData(){
     const dataFile = await fetch('./data.json');
     try {
