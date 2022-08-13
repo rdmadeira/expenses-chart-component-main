@@ -1,17 +1,15 @@
-//import moment from 'moment';
-//import axios from 'axios';
-//console.log(moment().format('YYYY'));
+import moment from './node_modules/moment/dist/moment.js';
+
+console.log(moment().format());
 async function getData(){
-    const dataFile = await fetch('./data.json');
+    const dataAmount =  await fetch('./data.json');
     try {
-        const dataAmount = await dataFile.json();
-        // amountAsign(dataAmount);
-        return dataAmount;
-    } catch(error) {
-        alert(`Whoooops, error: ${error}`);
+        return dataAmount.json();
+    } catch {
         console.log(error);
     }
 }
+
 /*  O podria ser:
 const dataAmount = fetch('./data.json');
 dataAmount.then(res=>{return res.json()})
@@ -34,7 +32,7 @@ async function amountAsign(){
         barrasVerticales[i].addEventListener('mouseout', disappearValue);
     }
     function dateVerify(){
-        let fecha = Date.now(); // genera un numero
+        let fecha = moment.now(); // genera un numero
         let hoy = new Date(fecha).getDay(); // genera numero de 0 a 6
         hoy == 0 ? hoy = 7 : hoy;
         barrasVerticales[hoy - 1].classList.replace('soft-red', 'cyan');
